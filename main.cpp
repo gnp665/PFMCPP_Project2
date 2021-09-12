@@ -55,37 +55,36 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
+    bool is_raining           = false;
+    bool smell_the_glove      = true;
+    bool release_the_hounds   = true;
 
-bool is_raining           = false;
-bool smell_the_glove      = true;
-bool release_the_hounds   = true;
+    char ch                   = 'A';
+    char ch_ascii             = 65;
+    char what_the             = 'f';
 
-char ch                   = 'A';
-char ch_ascii             = 65;
-char what_the             = 'f';
+    int my_neg_int            = -2147483648;
+    int beast_neighbor        = 668;
+    int my_pos_int            = 2147483647;
 
-int my_neg_int            = -2147483648;
-int beast_neighbor        = 668;
-int my_pos_int            = 2147483647;
+    float dead                = 3.14f;
+    float beef                = 2.71f;
+    float foo                 = 0.01f;
 
-float dead                = 3.14f;
-float beef                = 2.71f;
-float foo                 = 0.01f;
+    double trouble            = 2.22507e-308;
+    double mint               = 0;
+    double jeopardy           = 1.79769e+308;
 
-double trouble            = 2.22507e-308;
-double mint               = 0;
-double jeopardy           = 1.79769e+308;
+    unsigned int bar          = 0;
+    unsigned int nigel        = 11;
+    unsigned int limit        = 4294967295;
 
-unsigned int bar          = 0;
-unsigned int nigel        = 11;
-unsigned int limit        = 4294967295;
-
-ignoreUnused(is_raining, smell_the_glove, release_the_hounds, 
-             ch,         ch_ascii,        what_the,
-             my_neg_int, beast_neighbor,  my_pos_int,
-             dead,       beef,            foo, 
-             trouble,    mint,            jeopardy,
-             bar,        nigel,           limit);
+    ignoreUnused(is_raining, smell_the_glove, release_the_hounds, 
+                ch,         ch_ascii,        what_the,
+                my_neg_int, beast_neighbor,  my_pos_int,
+                dead,       beef,            foo, 
+                trouble,    mint,            jeopardy,
+                bar,        nigel,           limit);
 }
 
 /*
@@ -190,11 +189,11 @@ bool godKnows(char a = 'a', bool b = false, float c = 3.14f)
  10)
  */
 
- int convertFloatToInt (float my_float_val)
- {
+int convertFloatToInt (float my_float_val)
+{
     ignoreUnused(my_float_val);
     return {};
- }
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
