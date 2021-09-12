@@ -79,12 +79,7 @@ void variableDeclarations()
     unsigned int nigel        = 11;
     unsigned int limit        = 4294967295;
 
-    ignoreUnused(is_raining, smell_the_glove, release_the_hounds, 
-                ch,         ch_ascii,        what_the,
-                my_neg_int, beast_neighbor,  my_pos_int,
-                dead,       beef,            foo, 
-                trouble,    mint,            jeopardy,
-                bar,        nigel,           limit);
+    ignoreUnused(is_raining, smell_the_glove, release_the_hounds, ch, ch_ascii, what_the, my_neg_int, beast_neighbor,  my_pos_int, dead, beef, foo, trouble, mint, jeopardy, bar,   nigel, limit);
 }
 
 /*
