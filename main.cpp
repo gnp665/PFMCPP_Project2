@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ bool
+ char
+ int
+ float
+ double
+ unsigned int
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -57,12 +55,37 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+bool is_raining           = false;
+bool smell_the_glove      = true;
+bool release_the_hounds   = true;
+
+char ch                   = 'A';
+char ch_ascii             = 65;
+char what_the             = 'f';
+
+int my_neg_int            = -2147483648;
+int beast_neighbor        = 668;
+int my_pos_int            = 2147483647;
+
+float dead                = 3.14f;
+float beef                = 2.71f;
+float foo                 = 0.01f;
+
+double trouble            = 2.22507e-308;
+double mint               = 0;
+double jeopardy           = 1.79769e+308;
+
+unsigned int bar          = 0;
+unsigned int nigel        = 11;
+unsigned int limit        = 4294967295;
+
+ignoreUnused(is_raining, smell_the_glove, release_the_hounds, 
+             ch,         ch_ascii,        what_the,
+             my_neg_int, beast_neighbor,  my_pos_int,
+             dead,       beef,            foo, 
+             trouble,    mint,            jeopardy,
+             bar,        nigel,           limit);
 }
 
 /*
@@ -76,45 +99,102 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
+
 /*
  1)
  */
+
+float hotDogSales(int num_sold, float price)
+{ 
+    ignoreUnused(num_sold, price = 3.95f); 
+    return {}; 
+} 
 
 /*
  2)
  */
 
+int addTwoInts(int a, int b)
+{ 
+    ignoreUnused(a, b); 
+    return {}; 
+} 
+
 /*
  3)
  */
+
+int multTwoInts(int a, int b)
+{ 
+    ignoreUnused(a, b); 
+    return {}; 
+} 
 
 /*
  4)
  */
 
+double addTwoFloats(float a, float b)
+{ 
+    ignoreUnused(a, b); 
+    return {}; 
+} 
+
 /*
  5)
  */
+
+double multTwoFloats(float a, float b)
+{ 
+    ignoreUnused(a, b); 
+    return {}; 
+} 
 
 /*
  6)
  */
 
+char returnLargestChar(char a, char b, char c)
+{
+    ignoreUnused(a, b, c); 
+    return {}; 
+} 
+
+
 /*
  7)
  */
+
+void insertMagicHere(){}
 
 /*
  8)
  */
 
+void insertMoreMagicHere(int a, float b = 2.0f, bool c = false)
+{    
+    ignoreUnused(a, b, c);
+}
+
 /*
  9)
  */
 
+bool godKnows(char a = 'a', bool b = false, float c = 3.14f)
+{
+    ignoreUnused(a, b, c); 
+    return {}; 
+} 
+
 /*
  10)
  */
+
+ int convertFloatToInt (float my_float_val)
+ {
+    ignoreUnused(my_float_val);
+    return {};
+ }
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -133,30 +213,49 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    auto carRented = rentACar(6, 2); 
-    
+    auto car_rented = rentACar(6, 2); 
+   
     //1)
+
+    auto today_sales = hotDogSales(120, 4.50f);
     
     //2)
+
+    auto my_sum = addTwoInts(2, 2);
     
     //3)
+
+    auto my_product = multTwoInts(2, 2);
     
     //4)
+
+    auto my_new_sum = addTwoFloats(2.0f, 2.0f);
     
     //5)
     
+    auto my_new_product = multTwoFloats(2.0f, 2.0f);
+
     //6)
+
+    auto char_result = returnLargestChar (65, 'B', 'C');
     
     //7)
+
+    insertMagicHere();
     
     //8)
+
+    insertMoreMagicHere(69);
     
     //9)
+
+    auto will_happen = godKnows('z', true, 2.71f);
     
     //10)
+
+    auto result = convertFloatToInt(4.234f);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(car_rented, today_sales, my_sum, my_product, my_new_sum, my_new_product, char_result, will_happen, result);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
